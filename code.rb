@@ -8,7 +8,7 @@ class Code
             raise FormatError unless /\A[0-5]{4}\Z/.match?(string)
             @code = string
         else
-            @code = (Array.new(Code::LENGTH){rand(Code.MAX_DIGIT+1)}).join()
+            @code = (Array.new(Code::LENGTH){rand(Code::MAX_DIGIT+1)}).join()
         end
     end
 
